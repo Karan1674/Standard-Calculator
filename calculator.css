@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #edf1f4;
+}
+
+.dark{
+    background-color: #282c2f;
+}
+.container {
+    position: relative;
+    min-width: 450px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+}
+
+.dark .container{
+    background-color: #33393e;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(0,0,0,0.25);
+
+}
+.container .calculator {
+    position: relative;
+    display: grid;
+}
+
+.container .calculator .value {
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    height: 100px;
+    text-align: end;
+    color: #5166d6;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3), inset -5px -5px 10px #fff;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
+.dark .calculator .value{
+    background-color: #33393e;
+    color: #eee;
+    box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5),inset -15px -15px 20px rgba(0,0,0,0.25);
+}
+
+.container .calculator span {
+    position: relative;
+    padding: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25em;
+    color: #222121;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+    border-radius: 15px;
+}
+
+
+.dark .calculator span{
+    color: #eee;
+    border: 2px solid #4e4e4e;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 225, 0.1);
+}
+
+.container .calculator span:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px 5px 10px #fff;
+    color: #f44336;
+}
+
+.dark .calculator span:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 225, 0.1);
+}
+
+.container .calculator span#on {
+    background-color: #f13123;
+    color: #fff;
+    border: 2px solid #edf1f4;
+    grid-column: span 2;
+}
+
+.container .calculator span#equal {
+    color: #fff;
+    border: 2px solid #edf1f4;
+    grid-row: span 2;
+    background-color: #3621f3;
+}
+
+.container .calculator span#modify{
+    background-color: #07a8ad;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.container .calculator span#on:active,
+.container .calculator span#equal:active,
+.container .calculator span#modify:active {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+        -5px -5px 10px #fff,
+        inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.dark .calculator span#on,
+.dark .calculator span#equal,
+.dark .calculator span#modify{
+    border: 2px solid #bebaba;
+}
+
+
+.dark .calculator span#on:active,
+.dark .calculator span#equal:active,
+.dark .calculator span#modify:active{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 425px) 
+{
+.container{
+    min-width: 320px;
+}
+
+.container .calculator .value{
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.5em;
+}
+.container .calculator span{
+    min-width: 55px;
+    font-size: 1em;
+    margin: 4px;
+    padding: 9px;
+    border-radius: 8px;
+}
+}
+
+@media (min-width: 1550px) {
+    .container{
+        min-width: 600px;
+    }
+    
+    .container .calculator .value{
+        height: 130px;
+        line-height: 130px;
+        font-size: 3em;
+    }
+    .container .calculator span{
+        min-width: 150px;
+        font-size: 2.5em;
+        margin: 15px;
+        padding: 20px;
+    }
+}
+
+
+@media (min-width: 1850px) {
+    .container{
+        min-width: 800px;
+    }
+    
+    .container .calculator .value{
+        height: 200px;
+        line-height: 200px;
+        font-size: 5em;
+
+    }
+    .container .calculator span{
+        min-width: 250px;
+        font-size: 3em;
+        margin: 25px;
+        padding: 30px;
+    }
+}
